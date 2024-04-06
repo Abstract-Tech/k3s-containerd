@@ -528,7 +528,7 @@ func generateApparmorSpecOpts(sp *runtime.SecurityProfile, privileged, apparmorE
 			return nil, nil
 		}
 		// TODO (mikebrow): delete created apparmor default profile
-		return apparmor.WithDefaultProfile(appArmorDefaultProfileName), nil
+		return nil, nil
 	case runtime.SecurityProfile_Localhost:
 		// trimming the localhost/ prefix just in case even through it should not
 		// be necessary with the new SecurityProfile struct
